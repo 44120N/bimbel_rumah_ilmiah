@@ -1,0 +1,192 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+}
+
+.carousel__item {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.5s;
+  width: 100%;
+  /* height: 400px; */
+  justify-content: center;
+  align-items: center;
+}
+
+/* .carousel .carousel__item:nth-child(1) {
+  background-image: url(https://placehold.co/600x400);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.carousel .carousel__item:nth-child(2) {
+  background-color: #33cbe0;
+}
+.carousel .carousel__item:nth-child(3) {
+  background-color: #dc3964;
+}
+
+.carousel .carousel__item:nth-child(4) {
+  background-color: #ffc1a7;
+} */
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 1;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.pagination {
+  position: relative;
+  z-index: 100;
+  text-align: center;
+}
+
+.pagination span {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot {
+  transition: all 0.5s;
+}
+.dot.active {
+  transform: scale(1.2);
+  background-color: gray;
+}
+  
+  /* ANIMATE.CSS */
+  @-webkit-keyframes fadeIn {
+  from {
+  opacity: 0;
+  }
+  
+  to {
+  opacity: 1;
+  }
+  }
+  @keyframes fadeIn {
+  from {
+  opacity: 0;
+  }
+  
+  to {
+  opacity: 1;
+  }
+  }
+
+  @-webkit-keyframes fadeOut {
+  from {
+  opacity: 1;
+  }
+  
+  to {
+  opacity: 0;
+  }
+  }
+  @keyframes fadeOut {
+  from {
+  opacity: 1;
+  }
+  
+  to {
+  opacity: 0;
+  }
+  }
+  .animate__fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  animation-duration: 1s;
+  -webkit-animation-duration: 1s;
+  }
+  
+
+  /**/
+
+  /* BANNER */
+.black-bg {
+  /* display: flex; */
+  background-color: black;
+  z-index: 1;
+}
+
+.banner {
+  margin-top: var(--header-height);
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.banner video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.banner .caption {
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-wrap: wrap;
+}
+
+#title {
+  z-index: 2;
+  position: relative;
+  background-color: black;
+  padding: 0.5vh 0.5vw;
+  text-transform: uppercase;
+  font-size: 400%;
+  font-weight: var(--font-bold);
+  color: var(--first-color);
+}
+
+@media screen and (max-width: 750px) {
+  #title {
+    z-index: 2;
+    position: relative;
+    background-color: black;
+    padding: 0.25vh 0.25vw;
+    text-transform: uppercase;
+    font-size: 250%;
+    font-weight: var(--font-bold);
+    color: var(--second-color);
+  }
+}
