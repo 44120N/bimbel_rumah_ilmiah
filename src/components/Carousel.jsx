@@ -66,6 +66,20 @@ function Carousel({title, src}) {
     dots[slideIndex].classList.add("active");
   };
 
+  const generatePagination = () => {
+    const paginationDots = [];
+    for (let i = 0; i < carouselLength; i++){
+        paginationDots.push(
+            <span
+                key={i}
+                className={`dot ${i === slideIndex ? 'active' : ''}`}
+                onClick={() => currentSlide(i)}
+            ></span>
+        );
+    }
+    return paginationDots;
+  }
+
   //useEffect changes the style.display to "none" & remove all className with "active" in it; ASAP.
   useEffect(() => {
     if (carouselItem.current) {
@@ -101,11 +115,7 @@ function Carousel({title, src}) {
           &#10095;
         </button>
         <div className="pagination">
-          {/* change it based on the length of the slide. START: currentSlide(0)*/}
-          <span className="dot" onClick={() => currentSlide(0)}></span>
-          <span className="dot" onClick={() => currentSlide(1)}></span>
-          <span className="dot" onClick={() => currentSlide(2)}></span>
-          <span className="dot" onClick={() => currentSlide(3)}></span>
+          {generatePagination()}
         </div>
       </div>
     </>

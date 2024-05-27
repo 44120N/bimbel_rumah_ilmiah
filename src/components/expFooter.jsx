@@ -1,4 +1,4 @@
-import './Footer.css'
+import './expFooter.css'
 import logo_footer from "../assets/footerBRI.png"
 import { useEffect, useState } from 'react';
 const Footer = () => {
@@ -9,18 +9,23 @@ const Footer = () => {
     const wa_url = `https://wa.me/${contact}`;
     return (
         <>
-            <footer className="site-footer">
-                <div className="contents">
-                    <div>
-                        <div className="special-container">
-                            <div className="logo">
+            <footer>
+                <div className="footer__contents">
+                    {/* logo */}
+                    <div class="logo">
+                        <div className="logo__container">
+                            <div className="logo__holder--img">
                                 <img src={logo_footer} alt="" />
                             </div>
-                            <div className='desc'>
+                            <div className='logo__holder--desc'>
                                 <p id='name'><b style={{color: 'var(--light-color)'}}>Rumah</b> <b style={{color: 'var(--second-color)'}}>Ilmiah</b></p>
                                 <p style={{color: "#000"}} id='moto'>Menjadikan esok hari yang lebih baik</p>
                             </div>
                         </div>
+                    </div>
+                    {/* boxtextnubisbordertop */}
+                    <div className="footer__details">
+                        
                     </div>
                     <div>
                         <h6>WhatsApp</h6>

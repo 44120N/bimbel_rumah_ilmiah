@@ -85,7 +85,7 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li className="dropdown__item">
-                            <div className="nav__link">Tetrahedron
+                            <div className="nav__link">Blog
                             <i className="dropdown__arrow ri-arrow-drop-down-line"></i>
                             </div>
                             <ul className="dropdown__menu">
@@ -93,61 +93,19 @@ const Navbar = () => {
                                 <Link
                                     to="/square"
                                     className="nav__link--dropdown"
-                                    >Square</Link>
+                                    >Maths</Link>
                             </li>
                             <li>
                                 <Link
                                     to="rectangle"
                                     className="nav__link--dropdown"
-                                    >Rectangle</Link>
+                                    >Physics</Link>
                             </li>
                             <li>
                                 <Link
                                     to="/rhombus"
                                     className="nav__link--dropdown"
-                                    >Rhombus</Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/kite"
-                                    className="nav__link--dropdown"
-                                    >Kite</Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/trapezoid"
-                                    className="nav__link--dropdown"
-                                    >Trapezoid</Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/parallelogram"
-                                    className="nav__link--dropdown"
-                                    >Parallelogram</Link>
-                            </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <Link to="/polygon" className="nav__link" translate="no">
-                            Polygon</Link>
-                        </li>
-                        <li className="dropdown__item">
-                            <div className="nav__link">Circle
-                            <i className="dropdown__arrow ri-arrow-drop-down-line"></i>
-                            </div>
-                            <ul className="dropdown__menu">
-                            <li>
-                                <Link
-                                    to="/basic-circle"
-                                    className="nav__link--dropdown"
-                                    >Basic</Link>
-                            </li>
-                            <li>
-                                <Link
-                                    to="/advanced-circle"
-                                    className="nav__link--dropdown"
-                                    translate="no"
-                                    >Advance</Link>
+                                    >Informatics</Link>
                             </li>
                             </ul>
                         </li>

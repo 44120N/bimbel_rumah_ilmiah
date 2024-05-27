@@ -1,14 +1,26 @@
-.site-footer {
+footer {
     background-color: var(--menu-main-color);
     margin: 0;
     padding: 5vh 0;
 }
 
-.site-footer .contents {
+/* container = content. nodisplayflex */
+footer .footer__contents {
+    /* padding diatur pake media query */
     padding: 0 2vw;
+    /***********************************/
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.site-footer .special-container{
+.container-info{
+    border: top;
+
+}
+
+footer .logo__container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,7 +29,7 @@
     border-radius: 28px;
 }
 
-.site-footer .special-container p{
+footer .logo__container p{
     padding: 0 0 0 .2vw;
 }
 
@@ -25,22 +37,22 @@
     display: flex;
 }
 
-.site-footer p{
+footer p{
     color: var(--first-color);
     font-size: 1em;
     text-align: center;
 }
 
-.site-footer hr {
+footer hr {
     border-top-color: #bbb;
     opacity: 0.5
 }
 
-.site-footer hr.small {
+footer hr.small {
     margin: 20px 0
 }
 
-.site-footer .credit{
+footer .credit{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +60,7 @@
     margin: 5vh 0 0 0;
 }
 
-.site-footer h6 {
+footer h6 {
     color: #fff;
     font-size: 1.2em;
     text-transform: uppercase;
@@ -56,11 +68,11 @@
     text-align: center;
 }
 
-.site-footer a {
+footer a {
     color: #fff;
 }
 
-.site-footer a:hover {
+footer a:hover {
     color: var(--first-color);
     text-decoration: none;
 }
@@ -89,11 +101,11 @@
     display: inline-block
 }
 
-.site-footer .social-icons {
+footer .social-icons {
     text-align: right
 }
 
-/* .site-footer .social-icons a {
+/* footer .social-icons a {
     width: .8em;
     height: .8em;
     line-height: .8em;
@@ -102,7 +114,7 @@
     background-color: var(--second-color);
 } */
 
-.site-footer .social-icons .github, .site-footer .social-icons .discord, .site-footer .social-icons .youtube {
+footer .social-icons .github, footer .social-icons .discord, footer .social-icons .youtube {
     margin-left: 6px;
 }
 
@@ -187,7 +199,13 @@
     }
 }
 
-.site-footer .logo{
+/* LOGO */
+footer .logo{
+    display: flex;
+    justify-content: end;
+}
+
+footer .logo__holder--img{
     width: 3em;
     height: 3em;
     aspect-ratio: 1;
@@ -195,19 +213,19 @@
     border-radius: 50%;
 }
 
-.site-footer .logo img{
+footer .logo__holder--img img{
     width: 100%;
     height: 100%;
 }
 
-.site-footer .desc p{
+footer .logo__holder--desc p{
     text-wrap: nowrap;
     font-family: 'Bradley Hand';
     font-weight: bolder;
     font-size: 1.5em;
 }
 
-.site-footer .desc p#name{
+footer .logo__holder--desc p#name{
     text-wrap: nowrap;
     font-family: 'Bradley Hand';
     font-weight: bolder;
@@ -215,31 +233,31 @@
     margin-bottom: -2vh;
 }
 
-.site-footer .desc p#moto{
+footer .logo__holder--desc p#moto{
     text-wrap: nowrap;
     font-family: 'Bradley Hand';
     font-weight: bolder;
     font-size: .8em;
 }
 
-.site-footer .form {
+footer .form {
     margin: 8px;
     display: flex;
     flex-wrap: nowrap;
 }
 
-.site-footer .form input{
+footer .form input{
     border: none;
     padding: 0.5vh 0.3vw;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
 
-.site-footer .form input:focus{
+footer .form input:focus{
     outline: none;
 }
 
-.site-footer .form button{
+footer .form button{
     background-color: var(--light-color);
     color: var(--hover-color);
     padding: 0.5vh 0.3vw;
@@ -249,28 +267,28 @@
 }
 
 @media (max-width:1120px) {
-    .site-footer {
+    footer {
         padding-bottom: 0
     }
 }
 
 @media (max-width:648px) {
-    .site-footer {
+    footer {
         padding-bottom: 0
     }
-    .site-footer .credit{
+    footer .credit{
         justify-content: center;
     }
 }
 
 
 @media (max-width: 300px) {
-    .site-footer {
+    footer {
         padding: .8vh;
         font-size: .8em;
     }
 
-    .site-footer h6 {
+    footer h6 {
         font-size: 1em;
         margin-top: .8vh;
     }

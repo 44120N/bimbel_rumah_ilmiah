@@ -348,12 +348,3 @@ a {
 .header.pulled > .nav.container > .nav__menu > .nav__list > .dropdown__item > .dropdown__menu {
     background-color: var(--menu-main-color);
 }
-
-/* .header.pulled
-> .nav.container
-> .nav__menu.show-menu
-> .nav__list
-> li
-> .nav__link:hover {
-    background-color: var(--second-color);
-} */

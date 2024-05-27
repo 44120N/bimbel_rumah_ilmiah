@@ -1,5 +1,39 @@
 @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
+@font-face {
+  font-family: 'Wavehaus';
+  src: url('/src/assets/graham-paterson-wavehaus-typeface/Wavehaus-66Book.otf') format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Wavehaus';
+  src: url('/src/assets/graham-paterson-wavehaus-typeface/Wavehaus-128Bold.otf') format('opentype');
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: 'Bradley Hand';
+  src: url('/src/assets/Bradley-Hand-Font/BRADHI.ttf') format('truetype');
+}
+
+::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
 :root {
   --header-height: 3.7rem;
 
@@ -13,18 +47,23 @@
   --menu-main-color: #364d79;
 
   /* Font */
-  --body-font: "Inconsolata", sans-serif;
+  --body-font: "Wavehaus", sans-serif;
   --title-font: "Montserrat", sans-serif;
   --normal-font-size: 0.92rem;
-  --big-font-size: 1.2rem;
+  --big-font-size: 1.8em;
   --large-font-size: 2.5rem;
-  --font-regular: 400;
+  --font-regular: 500;
   --font-semi-bold: 600;
   --font-bold: 900;
 
   /* z index */
   --z-tooltip: 10;
   --z-fixed: 100;
+}
+
+::selection{
+  background: var(--hover-color);
+  color: var(--light-color);
 }
 
 /* Responsive Variable */
@@ -42,14 +81,14 @@
 
 /* MAIN */
 .about{
-  margin: 2%;
+  margin: 3vh 3vw 4%;
 }
 
 .content {
   margin-bottom: 1.5%;
 }
 .title {
-  font-size: 38px;
+  font-size: var(--big-font-size);
   font-weight: var(--font-bold);
   color: var(--third-color);
   text-align: center;
@@ -61,13 +100,12 @@ p {
   color: var(--third-color);
   font-family: var(--body-font);
   font-weight: var(--font-regular);
+  font-size: var(--normal-font-size);
 }
-.lineh {
-  width: auto;
-  margin: 0 auto;
-  padding: 5px 0;
+hr {
+  margin: 1.5vh 0 2vh;
   border-radius: 5px;
-  border-bottom: 4px solid var(--first-color);
+  border: 0.25vh solid var(--light-color);
 }
 
 /* table */
@@ -149,35 +187,6 @@ iframe {
   margin-top: 2vh;
 }
 
-/* FORM */
-.form {
-  background: var(--first-color);
-  width: 80%;
-  position: relative;
-  margin: 5vh auto;
-  padding: 5vh;
-  border-radius: 16px;
-}
-
-.form p {
-  text-align: center;
-}
-
-.form__equation {
-  color: var(--third-color);
-  font-size: 2em;
-  margin-bottom: 2%;
-}
-
-.form__result .form__equation {
-  font-size: 1.2em;
-}
-
-.form .eq-align {
-  display: flex;
-  justify-content: center;
-}
-
 .eq-align .form__equation {
   text-align: left;
 }
@@ -201,10 +210,6 @@ td input {
   height: 90%;
   padding: 1vh;
   font-size: 1rem;
-}
-
-.form td {
-  color: var(--third-color);
 }
 
 table video {
